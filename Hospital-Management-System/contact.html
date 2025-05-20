@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+
+    <style>
+
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  margin-top: 25px;
+}
+
+.contact-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.contact-container:hover {
+  transform: scale(1.05);
+}
+
+.form-container {
+  width: 55%;
+}
+
+.form-container h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group input,
+textarea {
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+textarea:focus {
+  border-color: #00c6ff;
+  outline: none;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  background-color: #00c6ff;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1f1c2c;
+}
+
+/* Image Container */
+.image-container {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 150px;
+  height: auto;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+  }
+
+  .form-container {
+      width: 100%;
+  }
+
+  .image-container {
+      display: none;
+  }
+}
+
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
+    <div class="container">
+
+      <a class="navbar-brand js-scroll-trigger" href="#" style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;"><h4><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp GLOBAL HOSPITALS</h4></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" style="margin-right: 40px;">
+              <a class="nav-link js-scroll-trigger" href="index.php"><h6>HOME</h6></a>
+          </li>
+          <li class="nav-item" style="margin-right: 40px;">
+              <a class="nav-link js-scroll-trigger" href="services.html"><h6>ABOUT US</h6></a>
+          </li>
+          <li class="nav-item" style="margin-right: 40px;">
+              <a class="nav-link js-scroll-trigger" href="ourDoctors.php"><h6>OUR DOCTORS</h6></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="contact.html"><h6>CONTACT</h6></a>
+          </li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="form-container">
+                <h2>Drop Us a Message</h2>
+                <form action="contact.php" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="txtName" placeholder="Your Name *" required />
+                        <input type="email" name="txtEmail" placeholder="Your Email *" required />
+                        <input type="tel" name="txtPhone" placeholder="Your Phone Number *" required />
+                    </div>
+                    <textarea name="txtMsg" placeholder="Your Message *" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            <div class="image-container">
+                <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="Rocket Contact" />
+            </div>
+        </div>
+    </section>
+</body>
+</html>
